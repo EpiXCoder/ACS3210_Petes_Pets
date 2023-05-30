@@ -11,3 +11,8 @@
 .card {
     margin-bottom:20px;
 }
+
+.red-asterisk::after {
+    content: "*";
+    color: red;
+  }
