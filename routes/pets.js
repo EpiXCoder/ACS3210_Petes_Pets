@@ -1,5 +1,7 @@
 // MODELS
 const Pet = require('../models/pet');
+const mailer = require('../utils/mailer');
+
 // UPLOADING TO AWS S3
 const multer  = require('multer');
 const upload = multer({ dest: 'uploads/' });
@@ -119,7 +121,7 @@ app.post('/pets', upload.single('avatar'), async (req, res, next) => {
       });
   });
 
-// PURCHASE
+
 // PURCHASE
   app.post('/pets/:id/purchase', (req, res) => {
     console.log(req.body);
@@ -135,8 +137,8 @@ app.post('/pets', upload.single('avatar'), async (req, res, next) => {
     // this way we'll insure we use a non-null value
     let petId = req.body.petId || req.params.id;
   
-    Pet.findById(petId).exec((err, pet)=> {
-      if (err) {
+    Pet.findById(petId).exec((err, pet) => {
+      if(err) {
         console.log('Error: ' + err);
         res.redirect(`/pets/${req.params.id}`);
       }
@@ -146,12 +148,18 @@ app.post('/pets', upload.single('avatar'), async (req, res, next) => {
         description: `Purchased ${pet.name}, ${pet.species}`,
         source: token,
       }).then((chg) => {
-        res.redirect(`/pets/${req.params.id}`);
+      // Convert the amount back to dollars for ease in displaying in the template
+        const user = {
+          email: req.body.stripeEmail,
+          amount: chg.amount / 100,
+          petName: pet.name
+        };
+        // Call our mail handler to manage sending emails
+        mailer.sendMail(user, req, res);
       })
       .catch(err => {
-        console.log('Error:' + err);
+        console.log('Error: ' + err);
       });
     })
-
   });
 }
