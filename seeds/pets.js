@@ -4,9 +4,9 @@ module.exports = [
         "species": "Rottweiler",
         "birthday": "20017-11-11",
         "favoriteFood": "Chicken",
-        "picUrl": "http://www.dogbreedslist.info/uploads/allimg/dog-pictures/Rottweiler-3.jpg",
+        "picUrl": "https://cdn.britannica.com/69/234469-050-B883797B/Rottweiler-dog.jpg",
         "price": 9.99,
-        "picUrlSq": "http://www.dogbreedplus.com/dog_breeds/images/cute-rottweiler-puppy.jpg",
+        "picUrlSq": "https://www.ellevetsciences.com/wp-content/uploads/2022/06/ev-blog-rottweiller-header-1024x683.jpg",
         "description": "Rex is a dog and he's a good dog who loves to play and hang out with his owners. He also likes to nap and enjoys eating dog food"
     },
     {
@@ -34,8 +34,9 @@ module.exports = [
         "species": "West Highland White Terrier",
         "birthday": "2008-11-11",
         "favoriteFood": "Fish",
-        "picUrl": "http://www.dogbreedslist.info/uploads/allimg/dog-pictures/West-Highland-White-Terrier-2.jpg",
-        "picUrlSq": "https://upload.wikimedia.org/wikipedia/commons/2/2c/West_Highland_White_Terrier_Krakow.jpg",
+        "picUrl": "https://cdn.britannica.com/15/236915-050-055930EB/West-Highland-white-terrier-dog.jpg",
+        "price": 10,
+        "picUrlSq": "https://www.zooplus.co.uk/magazine/wp-content/uploads/2018/01/fotolia_107510955-768x512.jpg",
         "description": "Princhi is a dog and he's a good dog who loves to play and hang out with his owners. He also likes to nap and enjoys eating dog food"
     },
     {
@@ -43,9 +44,9 @@ module.exports = [
         "species": "Poodle",
         "birthday": "2008-11-11",
         "favoriteFood": "Chicken",
-        "picUrl": "https://i.ytimg.com/vi/-57vwuw_aY8/maxresdefault.jpg",
+        "picUrl": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F47%2F2022%2F03%2F04%2Fstandard-poodle-sitting-in-leaves-466806289.jpg",
         "price": 9.99,
-        "picUrlSq": "http://www.caninest.com/images/black-poodle.jpg",
+        "picUrlSq": "https://www.allthingsdogs.com/wp-content/uploads/2021/11/standard-poodle-appearance.jpg",
         "description": "Mr. Fluffles is a dog and he's a good dog who loves to play and hang out with his owners. He also likes to nap and enjoys eating dog food"
     },
     {
